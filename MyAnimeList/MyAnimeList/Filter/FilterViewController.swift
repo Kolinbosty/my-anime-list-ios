@@ -105,6 +105,10 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
 
         cellVM.isSelected.toggle()
     }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.selectionsData[section].name
+    }
 }
 
 // MARK: - Create UI

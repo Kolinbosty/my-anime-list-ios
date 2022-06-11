@@ -20,6 +20,10 @@
 		77CBB3A628544CFE001E50A2 /* PagingUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3A528544CFE001E50A2 /* PagingUnit.swift */; };
 		77CBB3AA28545FC9001E50A2 /* PagingHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */; };
 		77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3AC28546EEE001E50A2 /* AnimePagingHandler.swift */; };
+		77CBB3B0285474FB001E50A2 /* ListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3AF285474FB001E50A2 /* ListResult.swift */; };
+		77CBB3B22854751E001E50A2 /* AnimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B12854751E001E50A2 /* AnimeData.swift */; };
+		77CBB3B4285475C8001E50A2 /* ACGImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B3285475C8001E50A2 /* ACGImageData.swift */; };
+		77CBB3B6285476E6001E50A2 /* MangaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B5285476E6001E50A2 /* MangaData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		77CBB3A528544CFE001E50A2 /* PagingUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingUnit.swift; sourceTree = "<group>"; };
 		77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingHandlerTest.swift; sourceTree = "<group>"; };
 		77CBB3AC28546EEE001E50A2 /* AnimePagingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimePagingHandler.swift; sourceTree = "<group>"; };
+		77CBB3AF285474FB001E50A2 /* ListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResult.swift; sourceTree = "<group>"; };
+		77CBB3B12854751E001E50A2 /* AnimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeData.swift; sourceTree = "<group>"; };
+		77CBB3B3285475C8001E50A2 /* ACGImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGImageData.swift; sourceTree = "<group>"; };
+		77CBB3B5285476E6001E50A2 /* MangaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MangaData.swift; path = ../../../../../Documents/MangaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 		77CBB37128544978001E50A2 /* MyAnimeList */ = {
 			isa = PBXGroup;
 			children = (
+				77CBB3AE285474E7001E50A2 /* DataStruct */,
 				77CBB3A228544A5A001E50A2 /* Paging */,
 				77CBB37228544978001E50A2 /* AppDelegate.swift */,
 				77CBB37428544978001E50A2 /* SceneDelegate.swift */,
@@ -153,6 +162,17 @@
 				77CBB3A328544A6D001E50A2 /* PagingHandler.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		77CBB3AE285474E7001E50A2 /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				77CBB3AF285474FB001E50A2 /* ListResult.swift */,
+				77CBB3B3285475C8001E50A2 /* ACGImageData.swift */,
+				77CBB3B12854751E001E50A2 /* AnimeData.swift */,
+				77CBB3B5285476E6001E50A2 /* MangaData.swift */,
+			);
+			path = DataStruct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +306,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CBB3B6285476E6001E50A2 /* MangaData.swift in Sources */,
 				77CBB37728544978001E50A2 /* ViewController.swift in Sources */,
 				77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */,
+				77CBB3B0285474FB001E50A2 /* ListResult.swift in Sources */,
 				77CBB37328544978001E50A2 /* AppDelegate.swift in Sources */,
 				77CBB3A628544CFE001E50A2 /* PagingUnit.swift in Sources */,
 				77CBB3A428544A6D001E50A2 /* PagingHandler.swift in Sources */,
+				77CBB3B22854751E001E50A2 /* AnimeData.swift in Sources */,
 				77CBB37528544978001E50A2 /* SceneDelegate.swift in Sources */,
+				77CBB3B4285475C8001E50A2 /* ACGImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

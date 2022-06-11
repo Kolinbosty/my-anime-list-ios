@@ -16,6 +16,10 @@
 		77CBB38A2854497C001E50A2 /* MyAnimeListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3892854497C001E50A2 /* MyAnimeListTests.swift */; };
 		77CBB3942854497C001E50A2 /* MyAnimeListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3932854497C001E50A2 /* MyAnimeListUITests.swift */; };
 		77CBB3962854497C001E50A2 /* MyAnimeListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3952854497C001E50A2 /* MyAnimeListUITestsLaunchTests.swift */; };
+		77CBB3A428544A6D001E50A2 /* PagingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3A328544A6D001E50A2 /* PagingHandler.swift */; };
+		77CBB3A628544CFE001E50A2 /* PagingUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3A528544CFE001E50A2 /* PagingUnit.swift */; };
+		77CBB3AA28545FC9001E50A2 /* PagingHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */; };
+		77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3AC28546EEE001E50A2 /* AnimePagingHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		77CBB38F2854497C001E50A2 /* MyAnimeListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAnimeListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CBB3932854497C001E50A2 /* MyAnimeListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListUITests.swift; sourceTree = "<group>"; };
 		77CBB3952854497C001E50A2 /* MyAnimeListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimeListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77CBB3A328544A6D001E50A2 /* PagingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingHandler.swift; sourceTree = "<group>"; };
+		77CBB3A528544CFE001E50A2 /* PagingUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingUnit.swift; sourceTree = "<group>"; };
+		77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingHandlerTest.swift; sourceTree = "<group>"; };
+		77CBB3AC28546EEE001E50A2 /* AnimePagingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimePagingHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		77CBB37128544978001E50A2 /* MyAnimeList */ = {
 			isa = PBXGroup;
 			children = (
+				77CBB3A228544A5A001E50A2 /* Paging */,
 				77CBB37228544978001E50A2 /* AppDelegate.swift */,
 				77CBB37428544978001E50A2 /* SceneDelegate.swift */,
 				77CBB37628544978001E50A2 /* ViewController.swift */,
@@ -114,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				77CBB3892854497C001E50A2 /* MyAnimeListTests.swift */,
+				77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */,
 			);
 			path = MyAnimeListTests;
 			sourceTree = "<group>";
@@ -125,6 +135,24 @@
 				77CBB3952854497C001E50A2 /* MyAnimeListUITestsLaunchTests.swift */,
 			);
 			path = MyAnimeListUITests;
+			sourceTree = "<group>";
+		};
+		77CBB3A228544A5A001E50A2 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				77CBB3AB28546E87001E50A2 /* Core */,
+				77CBB3AC28546EEE001E50A2 /* AnimePagingHandler.swift */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		77CBB3AB28546E87001E50A2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				77CBB3A528544CFE001E50A2 /* PagingUnit.swift */,
+				77CBB3A328544A6D001E50A2 /* PagingHandler.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CBB37728544978001E50A2 /* ViewController.swift in Sources */,
+				77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */,
 				77CBB37328544978001E50A2 /* AppDelegate.swift in Sources */,
+				77CBB3A628544CFE001E50A2 /* PagingUnit.swift in Sources */,
+				77CBB3A428544A6D001E50A2 /* PagingHandler.swift in Sources */,
 				77CBB37528544978001E50A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CBB3AA28545FC9001E50A2 /* PagingHandlerTest.swift in Sources */,
 				77CBB38A2854497C001E50A2 /* MyAnimeListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

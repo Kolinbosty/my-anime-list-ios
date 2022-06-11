@@ -11,7 +11,7 @@ struct PaginationData: Codable {
     let has_next_page: Bool
 }
 
-struct ListResult<DataType: Codable> {
+struct ListResult<DataType: Codable>: Codable {
     let data: [DataType]
     let pagination: PaginationData
 }

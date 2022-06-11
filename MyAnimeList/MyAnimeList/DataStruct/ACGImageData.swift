@@ -8,9 +8,9 @@
 import Foundation
 
 struct ACGImageLinksData: Codable {
-    let image_url: URL?
-    let small_image_url: URL?
-    let large_image_url: URL?
+    let image_url: String?
+    let small_image_url: String?
+    let large_image_url: String?
 }
 
 struct ACGImageData: Codable {

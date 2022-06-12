@@ -40,6 +40,9 @@
 		77CBB3D92855CE92001E50A2 /* ACGListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3D82855CE92001E50A2 /* ACGListViewModel.swift */; };
 		77CBB3DB2855D708001E50A2 /* ACGPeriodDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3DA2855D708001E50A2 /* ACGPeriodDisplay.swift */; };
 		77CBB3DD2855E2F2001E50A2 /* ACGListCellBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3DC2855E2F2001E50A2 /* ACGListCellBindable.swift */; };
+		77CBB3E22855F62A001E50A2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3E12855F62A001E50A2 /* WebViewController.swift */; };
+		77CBB3E42855F915001E50A2 /* FavoriteUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3E32855F915001E50A2 /* FavoriteUnit.swift */; };
+		77CBB3E62855FA8C001E50A2 /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3E52855FA8C001E50A2 /* FavoriteManager.swift */; };
 		9C4E546CC355C3846ED0E703 /* Pods_MyAnimeListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BC98A51020BB1DE7BE65B /* Pods_MyAnimeListUITests.framework */; };
 		EAA4C66F740E2DE6D6CC9469 /* Pods_MyAnimeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3B64E96CC5F12E6425198A /* Pods_MyAnimeList.framework */; };
 		F41D808B5081A812CF110425 /* Pods_MyAnimeListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC106DF56386F0434DB994C0 /* Pods_MyAnimeListTests.framework */; };
@@ -104,6 +107,9 @@
 		77CBB3D82855CE92001E50A2 /* ACGListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGListViewModel.swift; sourceTree = "<group>"; };
 		77CBB3DA2855D708001E50A2 /* ACGPeriodDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGPeriodDisplay.swift; sourceTree = "<group>"; };
 		77CBB3DC2855E2F2001E50A2 /* ACGListCellBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGListCellBindable.swift; sourceTree = "<group>"; };
+		77CBB3E12855F62A001E50A2 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		77CBB3E32855F915001E50A2 /* FavoriteUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUnit.swift; sourceTree = "<group>"; };
+		77CBB3E52855FA8C001E50A2 /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		8B3B64E96CC5F12E6425198A /* Pods_MyAnimeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAnimeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B938A6FE8EE6A6F3351216D /* Pods-MyAnimeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeList.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeList/Pods-MyAnimeList.release.xcconfig"; sourceTree = "<group>"; };
 		95717CF150ADF41CF99FBBA2 /* Pods-MyAnimeListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeListUITests.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeListUITests/Pods-MyAnimeListUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 		77CBB37128544978001E50A2 /* MyAnimeList */ = {
 			isa = PBXGroup;
 			children = (
+				77CBB3E02855F5DD001E50A2 /* WebView */,
 				77CBB3BD28549692001E50A2 /* Filter */,
 				77CBB3AE285474E7001E50A2 /* DataStruct */,
 				77CBB3A228544A5A001E50A2 /* Paging */,
@@ -284,6 +291,8 @@
 		77CBB3D22855AC52001E50A2 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				77CBB3E52855FA8C001E50A2 /* FavoriteManager.swift */,
+				77CBB3E32855F915001E50A2 /* FavoriteUnit.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -295,6 +304,14 @@
 				77CBB3D82855CE92001E50A2 /* ACGListViewModel.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		77CBB3E02855F5DD001E50A2 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				77CBB3E12855F62A001E50A2 /* WebViewController.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		DAFA4F494C02F92279CF3B4A /* Frameworks */ = {
@@ -529,17 +546,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CBB3C3285498A6001E50A2 /* UIImage+SFSymbol.swift in Sources */,
+				77CBB3E22855F62A001E50A2 /* WebViewController.swift in Sources */,
 				77CBB3CF28559788001E50A2 /* FilterUnit.swift in Sources */,
 				77CBB3B6285476E6001E50A2 /* MangaData.swift in Sources */,
 				77CBB37728544978001E50A2 /* ViewController.swift in Sources */,
 				77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */,
 				77CBB3C5285499CC001E50A2 /* FilterCell.swift in Sources */,
 				77CBB3B0285474FB001E50A2 /* ListResult.swift in Sources */,
+				77CBB3E62855FA8C001E50A2 /* FavoriteManager.swift in Sources */,
 				77CBB3C728549CFD001E50A2 /* FilterCellViewModel.swift in Sources */,
 				77CBB37328544978001E50A2 /* AppDelegate.swift in Sources */,
 				77CBB3A628544CFE001E50A2 /* PagingUnit.swift in Sources */,
 				77CBB3B9285481C5001E50A2 /* AnimeCellViewModel.swift in Sources */,
 				77CBB3CD2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift in Sources */,
+				77CBB3E42855F915001E50A2 /* FavoriteUnit.swift in Sources */,
 				77CBB3CB2854A40E001E50A2 /* FilterViewModel.swift in Sources */,
 				77CBB3BF285496A2001E50A2 /* FilterViewController.swift in Sources */,
 				77CBB3D12855A6E4001E50A2 /* MangaPagingHandler.swift in Sources */,

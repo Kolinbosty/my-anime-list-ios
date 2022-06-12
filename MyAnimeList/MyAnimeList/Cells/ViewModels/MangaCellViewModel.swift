@@ -12,10 +12,27 @@ class MangaCellViewModel: NSObject {
     let data: MangaData
     let page: Int
 
+    @Published private var isFavorite = false
+
+    private var cancellables: Set<AnyCancellable> = .init()
+
     init(data: MangaData, page: Int) {
         self.data = data
         self.page = page
         super.init()
+
+        setupBinding()
+    }
+
+    private func setupBinding() {
+        // Check favorite
+        let mangaData = data
+        FavoriteManager.favoriteList
+            .map { newList in
+                return newList.first(where: { $0.isEqualTo(manga: mangaData) }) != nil
+            }
+            .assign(to: \.isFavorite, on: self)
+            .store(in: &cancellables)
     }
 }
 
@@ -48,15 +65,25 @@ extension MangaCellViewModel: ACGListCellBindable {
     }
 
     var listHeartIcon: AnyPublisher<UIImage?, Never> {
-        // TODO: NOT FIN
-        return Just<Bool>(false)
+        return $isFavorite
             .map { isFavorit -> UIImage? in
                 return isFavorit ? .sf_heart_fill : .sf_heart
             }
             .eraseToAnyPublisher()
     }
 
+    var targerLink: URL? {
+        let encodedURLStr = data.url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return encodedURLStr.flatMap(URL.init)
+    }
+
     func handleHeartTapped() {
-        // TODO: NOT FIN
+        // Modify favorite
+        let unit = FavoriteUnit(manga: data)
+        if isFavorite {
+            FavoriteManager.remove(unit)
+        } else {
+            FavoriteManager.add(unit)
+        }
     }
 }

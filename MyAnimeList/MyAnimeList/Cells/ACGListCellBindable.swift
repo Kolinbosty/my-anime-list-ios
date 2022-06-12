@@ -15,32 +15,7 @@ protocol ACGListCellBindable {
     var listPeriodText: AnyPublisher<String?, Never> { get }
     var listHeartIcon: AnyPublisher<UIImage?, Never> { get }
 
+    var targerLink: URL? { get }
+
     func handleHeartTapped()
-
-    func convertToAnyBindable() -> AnyACGListCellBindable
-}
-
-extension ACGListCellBindable {
-    func convertToAnyBindable() -> AnyACGListCellBindable {
-        return .init(self)
-    }
-}
-
-class AnyACGListCellBindable: NSObject, ACGListCellBindable {
-
-    let base: ACGListCellBindable
-
-    init<B>(_ base: B) where B : ACGListCellBindable {
-        self.base = base
-    }
-
-    var listPhotoURL: AnyPublisher<URL?, Never> { base.listPhotoURL }
-    var listRankText: AnyPublisher<String?, Never> { base.listRankText }
-    var listTitle: AnyPublisher<String?, Never> { base.listTitle }
-    var listPeriodText: AnyPublisher<String?, Never> { base .listPeriodText }
-    var listHeartIcon: AnyPublisher<UIImage?, Never> { base.listHeartIcon }
-
-    func handleHeartTapped() {
-        base.handleHeartTapped()
-    }
 }

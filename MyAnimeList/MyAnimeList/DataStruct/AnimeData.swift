@@ -20,3 +20,9 @@ struct AnimeData: Codable {
     let rank: Int
     let aired: AnimeAiredData
 }
+
+extension AnimeData: Equatable {
+    static func == (lhs: AnimeData, rhs: AnimeData) -> Bool {
+        return lhs.mal_id == rhs.mal_id
+    }
+}

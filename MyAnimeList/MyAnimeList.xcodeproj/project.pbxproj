@@ -34,6 +34,12 @@
 		77CBB3CB2854A40E001E50A2 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3CA2854A40E001E50A2 /* FilterViewModel.swift */; };
 		77CBB3CD2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3CC2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift */; };
 		77CBB3CF28559788001E50A2 /* FilterUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3CE28559788001E50A2 /* FilterUnit.swift */; };
+		77CBB3D12855A6E4001E50A2 /* MangaPagingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3D02855A6E4001E50A2 /* MangaPagingHandler.swift */; };
+		77CBB3D52855AC79001E50A2 /* ACGListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3D42855AC79001E50A2 /* ACGListCell.swift */; };
+		77CBB3D72855B27F001E50A2 /* ACGListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3D62855B27F001E50A2 /* ACGListViewController.swift */; };
+		77CBB3D92855CE92001E50A2 /* ACGListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3D82855CE92001E50A2 /* ACGListViewModel.swift */; };
+		77CBB3DB2855D708001E50A2 /* ACGPeriodDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3DA2855D708001E50A2 /* ACGPeriodDisplay.swift */; };
+		77CBB3DD2855E2F2001E50A2 /* ACGListCellBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3DC2855E2F2001E50A2 /* ACGListCellBindable.swift */; };
 		9C4E546CC355C3846ED0E703 /* Pods_MyAnimeListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BC98A51020BB1DE7BE65B /* Pods_MyAnimeListUITests.framework */; };
 		EAA4C66F740E2DE6D6CC9469 /* Pods_MyAnimeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3B64E96CC5F12E6425198A /* Pods_MyAnimeList.framework */; };
 		F41D808B5081A812CF110425 /* Pods_MyAnimeListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC106DF56386F0434DB994C0 /* Pods_MyAnimeListTests.framework */; };
@@ -92,6 +98,12 @@
 		77CBB3CA2854A40E001E50A2 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		77CBB3CC2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterViewController+QuickConstructor.swift"; sourceTree = "<group>"; };
 		77CBB3CE28559788001E50A2 /* FilterUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterUnit.swift; sourceTree = "<group>"; };
+		77CBB3D02855A6E4001E50A2 /* MangaPagingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaPagingHandler.swift; sourceTree = "<group>"; };
+		77CBB3D42855AC79001E50A2 /* ACGListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGListCell.swift; sourceTree = "<group>"; };
+		77CBB3D62855B27F001E50A2 /* ACGListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGListViewController.swift; sourceTree = "<group>"; };
+		77CBB3D82855CE92001E50A2 /* ACGListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGListViewModel.swift; sourceTree = "<group>"; };
+		77CBB3DA2855D708001E50A2 /* ACGPeriodDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGPeriodDisplay.swift; sourceTree = "<group>"; };
+		77CBB3DC2855E2F2001E50A2 /* ACGListCellBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGListCellBindable.swift; sourceTree = "<group>"; };
 		8B3B64E96CC5F12E6425198A /* Pods_MyAnimeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAnimeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B938A6FE8EE6A6F3351216D /* Pods-MyAnimeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeList.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeList/Pods-MyAnimeList.release.xcconfig"; sourceTree = "<group>"; };
 		95717CF150ADF41CF99FBBA2 /* Pods-MyAnimeListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeListUITests.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeListUITests/Pods-MyAnimeListUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +185,8 @@
 				77CBB3AE285474E7001E50A2 /* DataStruct */,
 				77CBB3A228544A5A001E50A2 /* Paging */,
 				77CBB3B7285481AE001E50A2 /* Cells */,
+				77CBB3D22855AC52001E50A2 /* Favorite */,
+				77CBB3D32855AC58001E50A2 /* List */,
 				77CBB37228544978001E50A2 /* AppDelegate.swift */,
 				77CBB37428544978001E50A2 /* SceneDelegate.swift */,
 				77CBB37628544978001E50A2 /* ViewController.swift */,
@@ -209,6 +223,7 @@
 			children = (
 				77CBB3AB28546E87001E50A2 /* Core */,
 				77CBB3AC28546EEE001E50A2 /* AnimePagingHandler.swift */,
+				77CBB3D02855A6E4001E50A2 /* MangaPagingHandler.swift */,
 			);
 			path = Paging;
 			sourceTree = "<group>";
@@ -229,6 +244,7 @@
 				77CBB3B3285475C8001E50A2 /* ACGImageData.swift */,
 				77CBB3B12854751E001E50A2 /* AnimeData.swift */,
 				77CBB3B5285476E6001E50A2 /* MangaData.swift */,
+				77CBB3DA2855D708001E50A2 /* ACGPeriodDisplay.swift */,
 			);
 			path = DataStruct;
 			sourceTree = "<group>";
@@ -237,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				77CBB3BC285495BE001E50A2 /* ViewModels */,
+				77CBB3D42855AC79001E50A2 /* ACGListCell.swift */,
+				77CBB3DC2855E2F2001E50A2 /* ACGListCellBindable.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -261,6 +279,22 @@
 				77CBB3CE28559788001E50A2 /* FilterUnit.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		77CBB3D22855AC52001E50A2 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		77CBB3D32855AC58001E50A2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				77CBB3D62855B27F001E50A2 /* ACGListViewController.swift */,
+				77CBB3D82855CE92001E50A2 /* ACGListViewModel.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		DAFA4F494C02F92279CF3B4A /* Frameworks */ = {
@@ -508,12 +542,18 @@
 				77CBB3CD2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift in Sources */,
 				77CBB3CB2854A40E001E50A2 /* FilterViewModel.swift in Sources */,
 				77CBB3BF285496A2001E50A2 /* FilterViewController.swift in Sources */,
+				77CBB3D12855A6E4001E50A2 /* MangaPagingHandler.swift in Sources */,
 				77CBB3BB2854825F001E50A2 /* MangaCellViewModel.swift in Sources */,
+				77CBB3DD2855E2F2001E50A2 /* ACGListCellBindable.swift in Sources */,
 				77CBB3A428544A6D001E50A2 /* PagingHandler.swift in Sources */,
 				77CBB3B22854751E001E50A2 /* AnimeData.swift in Sources */,
 				77CBB37528544978001E50A2 /* SceneDelegate.swift in Sources */,
 				77CBB3C928549DB5001E50A2 /* Combine+Assign.swift in Sources */,
+				77CBB3D92855CE92001E50A2 /* ACGListViewModel.swift in Sources */,
 				77CBB3B4285475C8001E50A2 /* ACGImageData.swift in Sources */,
+				77CBB3DB2855D708001E50A2 /* ACGPeriodDisplay.swift in Sources */,
+				77CBB3D72855B27F001E50A2 /* ACGListViewController.swift in Sources */,
+				77CBB3D52855AC79001E50A2 /* ACGListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

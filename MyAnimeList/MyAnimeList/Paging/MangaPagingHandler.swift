@@ -1,33 +1,34 @@
 //
-//  AnimePagingHandler.swift
+//  MangaPagingHandler.swift
 //  MyAnimeList
 //
-//  Created by Alex Lin 公司 on 2022/6/11.
+//  Created by Alex Lin 公司 on 2022/6/12.
 //
 
 import Foundation
 import Combine
 import Alamofire
 
-class AnimePagingHandler: PagingHandler<AnimeCellViewModel> {
-    enum AnimeType: String, CaseIterable {
-        case tv
-        case movie
-        case ova
-        case special
-        case ona
-        case music
+class MangaPagingHandler: PagingHandler<MangaCellViewModel> {
+    enum MangaType: String, CaseIterable {
+        case manga
+        case novel
+        case lightnovel
+        case oneshot
+        case doujin
+        case manhwa
+        case manhua
     }
 
-    enum AnimeFilter: String, CaseIterable {
-        case airing
+    enum MangaFilter: String, CaseIterable {
+        case publishing
         case upcoming
         case bypopularity
         case favorite
     }
 
-    @Published var queryTypes: Set<AnimeType> = .init()
-    @Published var queryFilters: Set<AnimeFilter> = .init()
+    @Published var queryTypes: Set<MangaType> = .init()
+    @Published var queryFilters: Set<MangaFilter> = .init()
 
     private var cancellables: Set<AnyCancellable> = .init()
 
@@ -37,7 +38,7 @@ class AnimePagingHandler: PagingHandler<AnimeCellViewModel> {
 
         // Setup provider
         itemsProvider = { [weak self] lastItem in
-            return AF.fetchAnimationPublisher(
+            return AF.fetchMangaPublisher(
                 with: lastItem,
                 types: self?.queryTypes.convertToQueryString,
                 filters: self?.queryFilters.convertToQueryString
@@ -56,9 +57,32 @@ class AnimePagingHandler: PagingHandler<AnimeCellViewModel> {
     }
 }
 
+// MARK: - Tools
+private extension MangaPagingHandler {
+    var queryTypesString: String? {
+        guard queryTypes.isEmpty else {
+            return nil
+        }
+
+        return queryTypes
+            .map(\.rawValue)
+            .joined(separator: ",")
+    }
+
+    var queryFiltersString: String? {
+        guard queryFilters.isEmpty else {
+            return nil
+        }
+
+        return queryFilters
+            .map(\.rawValue)
+            .joined(separator: ",")
+    }
+}
+
 // MARK: - API
 fileprivate extension Alamofire.Session {
-    func fetchAnimationPublisher(with lastItem: AnimeCellViewModel?, types: String?, filters: String?) -> AnyPublisher<(list: [AnimeCellViewModel], hasNextPage: Bool), Error> {
+    func fetchMangaPublisher(with lastItem: MangaCellViewModel?, types: String?, filters: String?) -> AnyPublisher<(list: [MangaCellViewModel], hasNextPage: Bool), Error> {
         // Parameters
         var page = 1
         if let lastItem = lastItem {
@@ -75,21 +99,21 @@ fileprivate extension Alamofire.Session {
         }
 
         // Request
-        var urlComponents = URLComponents(string: "https://api.jikan.moe/v4/top/anime")!
+        var urlComponents = URLComponents(string: "https://api.jikan.moe/v4/top/manga")!
         urlComponents.queryItems = params.map {
             return URLQueryItem(name: $0, value: $1)
         }
 
         // API
         return AF.request(urlComponents.url!)
-            .publishDecodable(type: AnimeListResult.self)
-            .tryMap { resp throws -> (list: [AnimeCellViewModel], hasNextPage: Bool) in
+            .publishDecodable(type: MangaListResult.self)
+            .tryMap { resp throws -> (list: [MangaCellViewModel], hasNextPage: Bool) in
                 switch resp.result {
                 case .failure(let error):
                     throw error
 
                 case .success(let result):
-                    let cellVMs = result.data.map { AnimeCellViewModel(data: $0, page: page) }
+                    let cellVMs = result.data.map { MangaCellViewModel(data: $0, page: page) }
                     return (cellVMs, result.pagination.has_next_page)
                 }
             }

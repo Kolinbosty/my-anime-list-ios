@@ -42,3 +42,22 @@ extension AnimePagingHandler.AnimeFilter: FilterUnit {
         return "Filter"
     }
 }
+
+extension MangaPagingHandler.MangaType: FilterUnit {
+    static var filterSectionName: String {
+        return "Type"
+    }
+}
+
+extension MangaPagingHandler.MangaFilter: FilterUnit {
+    static var filterSectionName: String {
+        return "Filter"
+    }
+}
+
+extension Set where Element: FilterUnit {
+    var convertToQueryString: String? {
+        guard isEmpty else { return nil }
+        return map(\.rawValue).joined(separator: ",")
+    }
+}

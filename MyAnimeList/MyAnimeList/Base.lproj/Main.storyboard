@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EC5-fI-rQD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyAnimeList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-162" y="-17"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="7mf-pK-zZr">
+            <objects>
+                <viewController id="J0N-fs-vjc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QlV-uB-Gz1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2iO-0U-lXr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="heart.fill" catalog="system" id="1qy-BM-pB8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6me-q7-SYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-478"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="c1d-sd-5P2">
+            <objects>
+                <viewController id="fJy-BM-XYl" customClass="ACGListViewController" customModule="MyAnimeList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vhy-q1-cuM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1k-SC-Z7G">
+                                <rect key="frame" x="318" y="76" width="80" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease" catalog="system" title="Filter"/>
+                                <connections>
+                                    <action selector="handleFilterBtnTapped:" destination="fJy-BM-XYl" eventType="touchUpInside" id="Amt-Nu-P0t"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-Yc-OxM">
+                                <rect key="frame" x="16" y="76" width="290" height="32"/>
+                                <segments>
+                                    <segment title="Anime"/>
+                                    <segment title="Manga"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleSegmentedControlChanged:" destination="fJy-BM-XYl" eventType="valueChanged" id="J5l-D0-8Y3"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hBC-n5-7Eo">
+                                <rect key="frame" x="0.0" y="111" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dI6-2v-tw4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6U3-Yc-OxM" firstAttribute="leading" secondItem="dI6-2v-tw4" secondAttribute="leading" constant="16" id="3y6-Ih-2Cy"/>
+                            <constraint firstItem="dI6-2v-tw4" firstAttribute="trailing" secondItem="X1k-SC-Z7G" secondAttribute="trailing" constant="16" id="8gw-FT-M3R"/>
+                            <constraint firstItem="hBC-n5-7Eo" firstAttribute="leading" secondItem="dI6-2v-tw4" secondAttribute="leading" id="MKg-G0-JP0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hBC-n5-7Eo" secondAttribute="bottom" id="P0N-Ag-9Ck"/>
+                            <constraint firstItem="dI6-2v-tw4" firstAttribute="trailing" secondItem="hBC-n5-7Eo" secondAttribute="trailing" id="Q0B-p8-0QA"/>
+                            <constraint firstItem="hBC-n5-7Eo" firstAttribute="top" secondItem="6U3-Yc-OxM" secondAttribute="bottom" constant="4" id="WJs-x1-KQM"/>
+                            <constraint firstItem="X1k-SC-Z7G" firstAttribute="centerY" secondItem="6U3-Yc-OxM" secondAttribute="centerY" id="fPi-QE-KOh"/>
+                            <constraint firstItem="6U3-Yc-OxM" firstAttribute="top" secondItem="dI6-2v-tw4" secondAttribute="top" constant="32" id="sJp-Na-KYE"/>
+                            <constraint firstItem="X1k-SC-Z7G" firstAttribute="leading" secondItem="6U3-Yc-OxM" secondAttribute="trailing" constant="12" id="xPL-Ze-Wfs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="mrI-Z4-HjP"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="6U3-Yc-OxM" id="2Lk-pE-a5V"/>
+                        <outlet property="tableView" destination="hBC-n5-7Eo" id="Pmv-fC-rfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3a-K0-SuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-1142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="q8J-yd-APC">
+            <objects>
+                <tabBarController id="EC5-fI-rQD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qPb-fM-3jk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fJy-BM-XYl" kind="relationship" relationship="viewControllers" id="jZI-ew-rJM"/>
+                        <segue destination="J0N-fs-vjc" kind="relationship" relationship="viewControllers" id="yeW-RE-nIE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2RZ-IK-b8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="-786"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="line.3.horizontal.decrease" catalog="system" width="128" height="73"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AnimeAiredData: Codable {
+struct AnimeAiredData: Codable, ACGPeriodDisplay {
     let from: String
     let to: String?
 }

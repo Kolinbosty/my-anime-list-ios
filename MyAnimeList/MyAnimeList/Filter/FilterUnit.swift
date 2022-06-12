@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TODO: 可以測這個？
 protocol FilterUnit: RawRepresentable, CaseIterable where RawValue == String {
     init?(filterCellVM: FilterCellViewModel)
 
@@ -57,7 +58,7 @@ extension MangaPagingHandler.MangaFilter: FilterUnit {
 
 extension Set where Element: FilterUnit {
     var convertToQueryString: String? {
-        guard isEmpty else { return nil }
+        guard !isEmpty else { return nil }
         return map(\.rawValue).joined(separator: ",")
     }
 }

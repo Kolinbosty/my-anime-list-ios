@@ -33,6 +33,7 @@
 		77CBB3C928549DB5001E50A2 /* Combine+Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3C828549DB5001E50A2 /* Combine+Assign.swift */; };
 		77CBB3CB2854A40E001E50A2 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3CA2854A40E001E50A2 /* FilterViewModel.swift */; };
 		77CBB3CD2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3CC2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift */; };
+		77CBB3CF28559788001E50A2 /* FilterUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3CE28559788001E50A2 /* FilterUnit.swift */; };
 		9C4E546CC355C3846ED0E703 /* Pods_MyAnimeListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32BC98A51020BB1DE7BE65B /* Pods_MyAnimeListUITests.framework */; };
 		EAA4C66F740E2DE6D6CC9469 /* Pods_MyAnimeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3B64E96CC5F12E6425198A /* Pods_MyAnimeList.framework */; };
 		F41D808B5081A812CF110425 /* Pods_MyAnimeListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC106DF56386F0434DB994C0 /* Pods_MyAnimeListTests.framework */; };
@@ -90,6 +91,7 @@
 		77CBB3C828549DB5001E50A2 /* Combine+Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Assign.swift"; sourceTree = "<group>"; };
 		77CBB3CA2854A40E001E50A2 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		77CBB3CC2854AC5B001E50A2 /* FilterViewController+QuickConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterViewController+QuickConstructor.swift"; sourceTree = "<group>"; };
+		77CBB3CE28559788001E50A2 /* FilterUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterUnit.swift; sourceTree = "<group>"; };
 		8B3B64E96CC5F12E6425198A /* Pods_MyAnimeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAnimeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B938A6FE8EE6A6F3351216D /* Pods-MyAnimeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeList.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeList/Pods-MyAnimeList.release.xcconfig"; sourceTree = "<group>"; };
 		95717CF150ADF41CF99FBBA2 /* Pods-MyAnimeListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeListUITests.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeListUITests/Pods-MyAnimeListUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				77CBB3CA2854A40E001E50A2 /* FilterViewModel.swift */,
 				77CBB3C4285499CC001E50A2 /* FilterCell.swift */,
 				77CBB3C628549CFD001E50A2 /* FilterCellViewModel.swift */,
+				77CBB3CE28559788001E50A2 /* FilterUnit.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CBB3C3285498A6001E50A2 /* UIImage+SFSymbol.swift in Sources */,
+				77CBB3CF28559788001E50A2 /* FilterUnit.swift in Sources */,
 				77CBB3B6285476E6001E50A2 /* MangaData.swift in Sources */,
 				77CBB37728544978001E50A2 /* ViewController.swift in Sources */,
 				77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */,

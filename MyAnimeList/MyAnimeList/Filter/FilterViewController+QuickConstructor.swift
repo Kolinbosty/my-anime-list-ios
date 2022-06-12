@@ -7,43 +7,35 @@
 
 import UIKit
 
-// MARK: - Quick Constructor
+// MARK: Quick Constructor
 extension FilterViewController {
-    static func createAnimeFilter(selectdType: [AnimePagingHandler.AnimeType], selectdFilter: [AnimePagingHandler.AnimeFilter], completion: @escaping ([AnimePagingHandler.AnimeType], [AnimePagingHandler.AnimeFilter]) -> Void) -> UIViewController {
-
-        let typeKeyName = "Type"
-        let filterKeyName = "Filter"
-
+    static func createFilter<A: FilterUnit, B: FilterUnit>(selectedA: [A], selectedB: [B], completion: @escaping ([A], [B]) -> Void) -> UIViewController {
         // Create all selection raw data
         let allSelection: [FilterViewModel.SectionRawData] = [
-            (typeKeyName, AnimePagingHandler.AnimeType.allCases.map { $0.rawValue }),
-            (filterKeyName, AnimePagingHandler.AnimeFilter.allCases.map { $0.rawValue }),
+            A.allCasesFilterData,
+            B.allCasesFilterData,
         ]
 
         // Create default selection data
         let defualtSelection = [
-            typeKeyName: selectdType.map { $0.rawValue },
-            filterKeyName: selectdFilter.map { $0.rawValue },
+            A.filterSectionName: selectedA.map { $0.rawValue },
+            B.filterSectionName: selectedB.map { $0.rawValue },
         ]
 
         // Create VC
         let viewModel: FilterViewModel = .init(sections: allSelection, defaultSelection: defualtSelection)
         let vc = FilterViewController(viewModel: viewModel) { result in
             // Mapping completion
-            var newSelectedType: [AnimePagingHandler.AnimeType] = []
-            var newSelectedFilter: [AnimePagingHandler.AnimeFilter] = []
+            var newSelectedA: [A] = []
+            var newSelectedB: [B] = []
 
             result.forEach { (name: String, selected: [FilterCellViewModel]) in
                 switch name {
-                case typeKeyName:
-                    newSelectedType = selected.compactMap {
-                        AnimePagingHandler.AnimeType(rawValue: $0.name)
-                    }
+                case A.filterSectionName:
+                    newSelectedA = selected.compactMap(A.init)
 
-                case filterKeyName:
-                    newSelectedFilter = selected.compactMap {
-                        AnimePagingHandler.AnimeFilter(rawValue: $0.name)
-                    }
+                case B.filterSectionName:
+                    newSelectedB = selected.compactMap(B.init)
 
                 default:
                     assert(false, "This will not happend. something wrong...")
@@ -51,7 +43,7 @@ extension FilterViewController {
             }
 
             // Completion
-            completion(newSelectedType, newSelectedFilter)
+            completion(newSelectedA, newSelectedB)
         }
         let naviVC = UINavigationController(rootViewController: vc)
 

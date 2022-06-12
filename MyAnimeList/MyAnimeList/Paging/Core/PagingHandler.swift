@@ -41,7 +41,7 @@ class PagingHandler<ItemType: PagingUnit> {
     @Published private(set) var state: PagingHandlerState = .idle
     @Published private(set) var list: [ItemType] = []
     @Published private(set) var hasNextPage: Bool = true
-    private(set) var pagingQueue: DispatchQueue = .main
+    private(set) var pagingQueue: DispatchQueue = .init(label: "my.amine.list.paging")
     private var pagingCancellable: AnyCancellable? = nil
 
     var itemsProvider: ItemProvider?

@@ -124,6 +124,7 @@ private extension ACGListViewController {
 
         // Binding
         viewModel.$listType
+            .subscribe(on: DispatchQueue.main)
             .map(\.rawValue)
             .assign(to: \.selectedSegmentIndex, on: segmentedControl)
             .store(in: &cancellables)

@@ -53,6 +53,7 @@ class ACGListViewModel {
                     return mangaList
                 }
             }
+            .receive(on: DispatchQueue.main)
             .assign(to: \.currentListVMs, on: self)
             .store(in: &cancellables)
 
@@ -69,6 +70,7 @@ class ACGListViewModel {
                     return mangaState
                 }
             }
+            .receive(on: DispatchQueue.main)
             .assign(to: \.currentState, on: self)
             .store(in: &cancellables)
     }
@@ -100,8 +102,12 @@ extension ACGListViewModel {
     }
 
     func handlePullToRefresh() {
-        // TODO: not fin
-        print("~~~")
+        switch listType {
+        case .anime:
+            animePagingHandler.reload()
+        case .manga:
+            mangaPagingHandler.reload()
+        }
     }
 
     func needFetchNextPage() {

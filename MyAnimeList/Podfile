@@ -12,6 +12,8 @@ target 'MyAnimeList' do
 
   target 'MyAnimeListTests' do
     inherit! :search_paths
+    pod 'Kingfisher'
+    pod 'Alamofire'
   end
 
   target 'MyAnimeListUITests' do

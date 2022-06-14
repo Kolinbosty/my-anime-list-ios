@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://cdn.cocoapods.org/'
+platform :ios, '14.0'
+
+target 'MyAnimeList' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MyAnimeList
+  pod 'Kingfisher'
+  pod 'Alamofire'
+
+  target 'MyAnimeListTests' do
+    inherit! :search_paths
+    pod 'Kingfisher'
+    pod 'Alamofire'
+  end
+
+  target 'MyAnimeListUITests' do
+    inherit! :search_paths
+  end
+
+end

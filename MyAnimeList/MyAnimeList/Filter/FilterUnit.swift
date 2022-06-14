@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: 可以測這個？
 protocol FilterUnit: RawRepresentable, CaseIterable where RawValue == String {
     init?(filterCellVM: FilterCellViewModel)
 

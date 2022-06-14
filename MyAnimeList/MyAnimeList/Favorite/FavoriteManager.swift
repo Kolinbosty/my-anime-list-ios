@@ -10,12 +10,14 @@ import Combine
 
 struct FavoriteManager {
 
+    private static let userDefaultKey = "Favorite"
+
     static private(set) var favoriteList: CurrentValueSubject<[FavoriteUnit], Never> = {
         // Default
         var favorites: [FavoriteUnit] = []
 
         // Load from local
-        if let favoriteData = UserDefaults.standard.object(forKey: "favorite") as? Data {
+        if let favoriteData = UserDefaults.standard.object(forKey: userDefaultKey) as? Data {
             let decoder = JSONDecoder()
             if let localFavorite = try? decoder.decode([FavoriteUnit].self, from: favoriteData) {
                 favorites = localFavorite
@@ -51,7 +53,7 @@ struct FavoriteManager {
         // Save to UserDefaults
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(favoriteList.value) {
-            UserDefaults.standard.set(encoded, forKey: "favorite")
+            UserDefaults.standard.set(encoded, forKey: userDefaultKey)
         }
     }
 
@@ -63,5 +65,10 @@ struct FavoriteManager {
     static func isMangaFavorite(_ mange: MangaData) -> Bool {
         let unit = FavoriteUnit(manga: mange)
         return favoriteList.value.first(where: { $0 == unit }) != nil
+    }
+
+    static func clean() {
+        favoriteList.send([])
+        UserDefaults.standard.set(nil, forKey: userDefaultKey)
     }
 }

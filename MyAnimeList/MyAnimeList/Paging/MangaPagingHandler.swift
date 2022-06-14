@@ -57,29 +57,6 @@ class MangaPagingHandler: PagingHandler<MangaCellViewModel> {
     }
 }
 
-// MARK: - Tools
-private extension MangaPagingHandler {
-    var queryTypesString: String? {
-        guard queryTypes.isEmpty else {
-            return nil
-        }
-
-        return queryTypes
-            .map(\.rawValue)
-            .joined(separator: ",")
-    }
-
-    var queryFiltersString: String? {
-        guard queryFilters.isEmpty else {
-            return nil
-        }
-
-        return queryFilters
-            .map(\.rawValue)
-            .joined(separator: ",")
-    }
-}
-
 // MARK: - API
 fileprivate extension Alamofire.Session {
     func fetchMangaPublisher(with lastItem: MangaCellViewModel?, types: String?, filters: String?) -> AnyPublisher<(list: [MangaCellViewModel], hasNextPage: Bool), Error> {

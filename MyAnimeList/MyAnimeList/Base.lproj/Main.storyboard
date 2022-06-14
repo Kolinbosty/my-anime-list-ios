@@ -8,32 +8,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyAnimeList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-162" y="-17"/>
-        </scene>
         <!--Favorite-->
         <scene sceneID="7mf-pK-zZr">
             <objects>
-                <viewController id="J0N-fs-vjc" sceneMemberID="viewController">
+                <viewController id="J0N-fs-vjc" customClass="FavoriteListViewController" customModule="MyAnimeList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QlV-uB-Gz1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="C9K-s7-yoP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2iO-0U-lXr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C9K-s7-yoP" firstAttribute="leading" secondItem="QlV-uB-Gz1" secondAttribute="leading" id="at1-gN-zSx"/>
+                            <constraint firstAttribute="trailing" secondItem="C9K-s7-yoP" secondAttribute="trailing" id="hig-Jk-CwG"/>
+                            <constraint firstItem="C9K-s7-yoP" firstAttribute="top" secondItem="QlV-uB-Gz1" secondAttribute="topMargin" id="n06-Hq-C5k"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="C9K-s7-yoP" secondAttribute="bottom" id="zDw-Ol-w86"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" image="heart.fill" catalog="system" id="1qy-BM-pB8"/>
+                    <connections>
+                        <outlet property="tableView" destination="C9K-s7-yoP" id="Q0x-NI-vIU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6me-q7-SYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

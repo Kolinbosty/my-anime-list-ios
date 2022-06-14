@@ -16,7 +16,7 @@ class MangaCellViewModel: NSObject {
 
     private var cancellables: Set<AnyCancellable> = .init()
 
-    init(data: MangaData, page: Int) {
+    init(data: MangaData, page: Int = 0) {
         self.data = data
         self.page = page
         super.init()
@@ -50,12 +50,12 @@ extension MangaCellViewModel: ACGListCellBindable {
     }
 
     var listRankText: AnyPublisher<String?, Never> {
-        return Just<String?>("\(data.rank)")
+        return Just<String?>("Rank: \(data.rank)")
             .eraseToAnyPublisher()
     }
 
     var listTitle: AnyPublisher<String?, Never> {
-        return Just<String?>(data.title)
+        return Just<String?>("Title: \(data.title)")
             .eraseToAnyPublisher()
     }
 

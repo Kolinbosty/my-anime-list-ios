@@ -15,27 +15,42 @@ protocol ACGPeriodDisplay {
 }
 
 extension ACGPeriodDisplay {
-    // TODO: TEST THIS
-    var toPeriodText: String {
-        // Parsing formatter
+
+    private var parseFormatter: DateFormatter {
         // 2009-03-17T00:00:00+00:00
         let dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
 
-        // Display formatter
+        return dateFormatter
+    }
+
+    private var displayFormatter: DateFormatter {
         let displayFormat = "yyyy-MM-dd"
         let displayFormatter = DateFormatter()
         displayFormatter.dateFormat = displayFormat
         displayFormatter.timeZone = TimeZone(abbreviation: "UTC")
 
-        let fromText = dateFormatter.date(from: from).flatMap {
+        return displayFormatter
+    }
+
+    var fromDate: Date? {
+        return parseFormatter.date(from: from)
+    }
+
+    var toDate: Date? {
+        let formatter = parseFormatter
+        return to.flatMap {
+            formatter.date(from: $0)
+        }
+    }
+
+    var toPeriodText: String {
+        let fromText = fromDate.flatMap {
             displayFormatter.string(from: $0)
         }
-        let toText = to.flatMap {
-            dateFormatter.date(from: $0)
-        }.flatMap {
+        let toText = toDate.flatMap {
             displayFormatter.string(from: $0)
         }
 

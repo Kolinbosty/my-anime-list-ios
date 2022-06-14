@@ -16,7 +16,7 @@ class AnimeCellViewModel: NSObject {
 
     private var cancellables: Set<AnyCancellable> = .init()
 
-    init(data: AnimeData, page: Int) {
+    init(data: AnimeData, page: Int = 0) {
         self.data = data
         self.page = page
         super.init()

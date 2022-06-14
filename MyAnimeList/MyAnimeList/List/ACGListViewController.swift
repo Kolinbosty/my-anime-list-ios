@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ACGListViewController: UIViewController {
+class ACGListViewController: UIViewController, ACGTargetLinkPresenter {
 
     enum Section {
         case list
@@ -105,12 +105,7 @@ extension ACGListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellVM = currentListVMs[indexPath.item]
-
-        // Create WebView
-        let nextVC = WebViewController()
-        nextVC.load(cellVM.targerLink)
-
-        present(nextVC, animated: true)
+        presentWebView(with: cellVM)
     }
 }
 

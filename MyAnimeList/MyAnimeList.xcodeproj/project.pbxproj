@@ -19,6 +19,7 @@
 		770D48072857383400C401FE /* MangaCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D48062857383400C401FE /* MangaCellViewModelTest.swift */; };
 		770D4809285840B400C401FE /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D4808285840B400C401FE /* FavoriteListViewController.swift */; };
 		770D480B2858459700C401FE /* ACGTargetLinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D480A2858459700C401FE /* ACGTargetLinkPresenter.swift */; };
+		770D480D28585C3D00C401FE /* FavoriteListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D480C28585C3D00C401FE /* FavoriteListViewModelTest.swift */; };
 		77CBB37328544978001E50A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB37228544978001E50A2 /* AppDelegate.swift */; };
 		77CBB37528544978001E50A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB37428544978001E50A2 /* SceneDelegate.swift */; };
 		77CBB37A28544978001E50A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CBB37828544978001E50A2 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		770D48062857383400C401FE /* MangaCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaCellViewModelTest.swift; sourceTree = "<group>"; };
 		770D4808285840B400C401FE /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
 		770D480A2858459700C401FE /* ACGTargetLinkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGTargetLinkPresenter.swift; sourceTree = "<group>"; };
+		770D480C28585C3D00C401FE /* FavoriteListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModelTest.swift; sourceTree = "<group>"; };
 		77CBB36F28544978001E50A2 /* MyAnimeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CBB37228544978001E50A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CBB37428544978001E50A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,15 +229,16 @@
 			isa = PBXGroup;
 			children = (
 				770D47FA2857105000C401FE /* DummyData.swift */,
-				77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */,
-				770D47F42856FF0800C401FE /* CombineAssignTest.swift */,
 				770D47F62857038A00C401FE /* SFSymbolImageTest.swift */,
-				770D47F8285709A800C401FE /* FavoriteManagerTest.swift */,
+				770D47F42856FF0800C401FE /* CombineAssignTest.swift */,
+				77CBB3A928545FC9001E50A2 /* PagingHandlerTest.swift */,
 				770D47FC2857110A00C401FE /* FilterUnitTest.swift */,
 				770D47FE285727C300C401FE /* FilterCellViewModelTest.swift */,
 				770D4804285735BF00C401FE /* FilterViewModelTest.swift */,
 				770D4800285729E100C401FE /* AnimeCellViewModelTest.swift */,
 				770D48062857383400C401FE /* MangaCellViewModelTest.swift */,
+				770D47F8285709A800C401FE /* FavoriteManagerTest.swift */,
+				770D480C28585C3D00C401FE /* FavoriteListViewModelTest.swift */,
 				770D48022857310C00C401FE /* ACGPeriodDisplayTest.swift */,
 			);
 			path = MyAnimeListTests;
@@ -624,6 +627,7 @@
 				770D47FF285727C300C401FE /* FilterCellViewModelTest.swift in Sources */,
 				77CBB3AA28545FC9001E50A2 /* PagingHandlerTest.swift in Sources */,
 				770D48032857310C00C401FE /* ACGPeriodDisplayTest.swift in Sources */,
+				770D480D28585C3D00C401FE /* FavoriteListViewModelTest.swift in Sources */,
 				770D4805285735BF00C401FE /* FilterViewModelTest.swift in Sources */,
 				770D47FD2857110A00C401FE /* FilterUnitTest.swift in Sources */,
 				770D47F9285709A800C401FE /* FavoriteManagerTest.swift in Sources */,

@@ -95,7 +95,7 @@ class FilterUnitTest: XCTestCase {
         let unit = FavoriteUnit(manga: .dummy)
 
         // Act
-        let vm = unit.createListCellViewModel()
+        let vm = unit.listCellViewModel
 
         // Assert
         XCTAssertNotNil(vm as? MangaCellViewModel)
@@ -106,7 +106,7 @@ class FilterUnitTest: XCTestCase {
         let unit = FavoriteUnit(anime: .dummy)
 
         // Act
-        let vm = unit.createListCellViewModel()
+        let vm = unit.listCellViewModel
 
         // Assert
         XCTAssertNotNil(vm as? AnimeCellViewModel)

@@ -43,7 +43,7 @@ struct FavoriteUnit: Codable, Equatable {
 }
 
 extension FavoriteUnit {
-    func createListCellViewModel() -> ACGListCellBindable {
+    var listCellViewModel: ACGListCellBindable {
         switch type {
         case .anime(let data):
             return AnimeCellViewModel(data: data)

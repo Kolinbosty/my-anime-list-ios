@@ -1,0 +1,6 @@
+framework module Pods_MyAnimeListTests {
+  umbrella header "Pods-MyAnimeListTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

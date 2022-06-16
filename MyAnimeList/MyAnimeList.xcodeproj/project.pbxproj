@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770A0C98285B16FD00EDAAB0 /* MangaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A0C97285B16FD00EDAAB0 /* MangaData.swift */; };
 		770D47F52856FF0800C401FE /* CombineAssignTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D47F42856FF0800C401FE /* CombineAssignTest.swift */; };
 		770D47F72857038A00C401FE /* SFSymbolImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D47F62857038A00C401FE /* SFSymbolImageTest.swift */; };
 		770D47F9285709A800C401FE /* FavoriteManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770D47F8285709A800C401FE /* FavoriteManagerTest.swift */; };
@@ -34,7 +35,6 @@
 		77CBB3B0285474FB001E50A2 /* ListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3AF285474FB001E50A2 /* ListResult.swift */; };
 		77CBB3B22854751E001E50A2 /* AnimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B12854751E001E50A2 /* AnimeData.swift */; };
 		77CBB3B4285475C8001E50A2 /* ACGImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B3285475C8001E50A2 /* ACGImageData.swift */; };
-		77CBB3B6285476E6001E50A2 /* MangaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B5285476E6001E50A2 /* MangaData.swift */; };
 		77CBB3B9285481C5001E50A2 /* AnimeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3B8285481C5001E50A2 /* AnimeCellViewModel.swift */; };
 		77CBB3BB2854825F001E50A2 /* MangaCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3BA2854825F001E50A2 /* MangaCellViewModel.swift */; };
 		77CBB3BF285496A2001E50A2 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBB3BE285496A2001E50A2 /* FilterViewController.swift */; };
@@ -80,6 +80,7 @@
 		1751057B85E4F9731C116C23 /* Pods-MyAnimeListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeListTests.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeListTests/Pods-MyAnimeListTests.release.xcconfig"; sourceTree = "<group>"; };
 		60C8FCA5A61EC1D0FFCFAA6F /* Pods-MyAnimeList-MyAnimeListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeList-MyAnimeListUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyAnimeList-MyAnimeListUITests/Pods-MyAnimeList-MyAnimeListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		711AD7CA3C2637DE6EBA88B0 /* Pods-MyAnimeList-MyAnimeListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAnimeList-MyAnimeListUITests.release.xcconfig"; path = "Target Support Files/Pods-MyAnimeList-MyAnimeListUITests/Pods-MyAnimeList-MyAnimeListUITests.release.xcconfig"; sourceTree = "<group>"; };
+		770A0C97285B16FD00EDAAB0 /* MangaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MangaData.swift; sourceTree = "<group>"; };
 		770D47F42856FF0800C401FE /* CombineAssignTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAssignTest.swift; sourceTree = "<group>"; };
 		770D47F62857038A00C401FE /* SFSymbolImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolImageTest.swift; sourceTree = "<group>"; };
 		770D47F8285709A800C401FE /* FavoriteManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManagerTest.swift; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		77CBB3AF285474FB001E50A2 /* ListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResult.swift; sourceTree = "<group>"; };
 		77CBB3B12854751E001E50A2 /* AnimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeData.swift; sourceTree = "<group>"; };
 		77CBB3B3285475C8001E50A2 /* ACGImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGImageData.swift; sourceTree = "<group>"; };
-		77CBB3B5285476E6001E50A2 /* MangaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MangaData.swift; path = ../../../../../Documents/MangaData.swift; sourceTree = "<group>"; };
 		77CBB3B8285481C5001E50A2 /* AnimeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCellViewModel.swift; sourceTree = "<group>"; };
 		77CBB3BA2854825F001E50A2 /* MangaCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaCellViewModel.swift; sourceTree = "<group>"; };
 		77CBB3BE285496A2001E50A2 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 				77CBB3AF285474FB001E50A2 /* ListResult.swift */,
 				77CBB3B3285475C8001E50A2 /* ACGImageData.swift */,
 				77CBB3B12854751E001E50A2 /* AnimeData.swift */,
-				77CBB3B5285476E6001E50A2 /* MangaData.swift */,
+				770A0C97285B16FD00EDAAB0 /* MangaData.swift */,
 				77CBB3DA2855D708001E50A2 /* ACGPeriodDisplay.swift */,
 			);
 			path = DataStruct;
@@ -587,13 +587,13 @@
 			files = (
 				77CBB3C3285498A6001E50A2 /* UIImage+SFSymbol.swift in Sources */,
 				77CBB3CF28559788001E50A2 /* FilterUnit.swift in Sources */,
-				77CBB3B6285476E6001E50A2 /* MangaData.swift in Sources */,
 				77CBB3AD28546EEE001E50A2 /* AnimePagingHandler.swift in Sources */,
 				77CBB3C5285499CC001E50A2 /* FilterCell.swift in Sources */,
 				77CBB3B0285474FB001E50A2 /* ListResult.swift in Sources */,
 				770D480B2858459700C401FE /* ACGTargetLinkPresenter.swift in Sources */,
 				77CBB3E62855FA8C001E50A2 /* FavoriteManager.swift in Sources */,
 				77CBB3C728549CFD001E50A2 /* FilterCellViewModel.swift in Sources */,
+				770A0C98285B16FD00EDAAB0 /* MangaData.swift in Sources */,
 				77CBB37328544978001E50A2 /* AppDelegate.swift in Sources */,
 				77CBB3A628544CFE001E50A2 /* PagingUnit.swift in Sources */,
 				77CBB3B9285481C5001E50A2 /* AnimeCellViewModel.swift in Sources */,
